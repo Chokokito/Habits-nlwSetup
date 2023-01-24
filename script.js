@@ -20,6 +20,7 @@ const button = document.querySelector('header button')
 button.addEventListener('click', add)
 form.addEventListener('change', save)
 
+//Adiciona dia atual
 function add(){
 
     const today = new Date().toLocaleDateString('pt-br').slice(0, -5);
@@ -43,19 +44,46 @@ const data = JSON.parse(localStorage.getItem('NLWSetup@habits')) || {}
 
 nlwSetup.setData(data)
 nlwSetup.load()
-//
+// Notificação - Erro ao Adicionar dia já existente.
 function dayError(){
     document.querySelector('.dayError').classList.add('dayErrorShow')
     setTimeout(()=>{
         document.querySelector('.dayError').classList.remove('dayErrorShow')
     },2000)
 }
+//Troca a página para o fundo branco.
+const label = document.querySelector('label')
+const body = document.querySelector('body')
+const header = document.querySelector('header')
+const input = document.querySelectorAll('.day input')
+const dayText = document.querySelectorAll('.day div')
+const logo = document.querySelector('.logo')
+const logoblack = document.querySelector('.logoblack')
 
-function bgDarkMode(){
-    document.querySelector('label:after').addEventListener('click',()=>{
-        document.querySelector('body').classList.add('changeBgColor')
-    })
+label.addEventListener('click', changeBg)
+
+function changeBg(){
+
+    const today = new Date().toLocaleDateString('pt-br').slice(0, -5);
+    const dayExists = nlwSetup.dayExists(today)
+
+    body.classList.toggle('changeBg');
+    header.classList.toggle('changeBgH');
+    button.classList.toggle('changeBgBt');
+    //Tem que colocar o if, para ele só puxar os inputs após o dia existir.
+    //Se não dá merda, ele puxa antes de existir os dias, daí ele não reconhece.
+    if(dayExists){
+        input.forEach(input =>{
+            input.classList.toggle('changeBgInput');
+        })
+        dayText.forEach(dayText =>{
+            dayText.classList.toggle('changeBgText');
+        })
+    }
+    logoblack.classList.toggle('logoBlackShow')
+    logo.classList.toggle('logoWhiteHide')
 }
+
 
 /*
 
