@@ -110,7 +110,7 @@ label:active:after{
 
 
 .dayError{
-    background-color:#09090A;
+    background-color:transparent;
     top: -100%;
     left: 40%;
     position: fixed;

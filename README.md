@@ -2,7 +2,6 @@
 
 <p align="center">
 NLW é um evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
-<a href="https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito">Estude esse projeto em formato de vídeo clicando aqui.</a>
 </p>
 
 <p align="center">
@@ -41,6 +40,17 @@ O projeto Habits, é um app para ajudar a rastrear os hábitos.
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+
+## 🎨 Alterações!
+
+Algumas coisas como a notificação do dia existente, e o modo claro foram totalmente por mim, e não são ensinadas no NLW!
+
+<p align="center">
+  <img alt="projeto Habbits" src=".github/WhiteMode.png" width="100%">
+</p>
+<p align="center">
+  <img alt="projeto Habbits" src=".github/DiaNot.png" width="100%">
+</p>
 
 ## Licença
 
