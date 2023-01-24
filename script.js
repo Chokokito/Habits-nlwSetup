@@ -59,6 +59,7 @@ const input = document.querySelectorAll('.day input')
 const dayText = document.querySelectorAll('.day div')
 const logo = document.querySelector('.logo')
 const logoblack = document.querySelector('.logoblack')
+const error = document.querySelector('.dayError')
 
 label.addEventListener('click', changeBg)
 
@@ -82,9 +83,10 @@ function changeBg(){
     }
     logoblack.classList.toggle('logoBlackShow')
     logo.classList.toggle('logoWhiteHide')
+
+
 }
-
-
+    
 /*
 
 

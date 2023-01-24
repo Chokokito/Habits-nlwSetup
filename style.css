@@ -39,7 +39,7 @@ header{
     visibility: hidden;
 }
 
-label{
+.darkmode{
     width: 70px;
     height: 35px;
     background-color: #ebebeb;
@@ -51,7 +51,7 @@ label{
     margin: 0px 2px;
     transition: 0.3s;
 }
-label:after{
+.darkmode:after{
     content: "";
     width: 31px;
     height: 31px;
@@ -63,7 +63,7 @@ label:after{
     transition: 0.3s;
     cursor: pointer;
 }
-label:active:after{
+.darkmode:active:after{
     width: 32px;
 }
 
@@ -110,12 +110,33 @@ label:active:after{
 
 
 .dayError{
-    background-color:transparent;
-    top: -100%;
-    left: 40%;
+    background-color:#BE123C;
+    color:white;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.4);
+
     position: fixed;
-    visibility: hidden;
+    align-items: center;
+    visibility: visible;
     transition: 1s;
+
+    display: flex;
+    gap: 12px;
+
+    height: 77px;
+    width: 320px;
+    left: 38%;
+    top: -150%;
+
+    border: 5px solid #4b0c1b;
+    border-radius:10px;
+    padding: 16px 16px 16px 16px;
+
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+
 }
 
 .dayErrorShow{
@@ -124,7 +145,6 @@ label:active:after{
     top:20%;
 
 }
-
 
 
 
@@ -239,7 +259,7 @@ input:checked{
     .dayError{
         left:10%;
     }
-    label{
+    .darkmode{
         transform: rotate(90deg);
     }
     #darkmode-toggle:checked +label:after{
@@ -247,8 +267,13 @@ input:checked{
     }
 }
 @media (max-width: 362px){
-    label{
+    .darkmode{
         visibility: hidden;
+    }
+    .dayError{
+        left: 0%;
+        height: 65px;
+        width: 280px;
     }
 }
 
