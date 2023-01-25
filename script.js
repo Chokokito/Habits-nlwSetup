@@ -83,8 +83,15 @@ function changeBg(){
     }
     logoblack.classList.toggle('logoBlackShow')
     logo.classList.toggle('logoWhiteHide')
+    //Pra lembrar se o usuário ativou o modo claro.
+    localStorage.setItem("Clicked", "true")
+        if(body.classList.contains('changeBg') == false){
+            localStorage.setItem("Clicked", "false")
+        }
 
-
+}
+if(localStorage.getItem("Clicked") === "true"){
+    changeBg();
 }
     
 /*
