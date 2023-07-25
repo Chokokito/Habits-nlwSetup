@@ -94,7 +94,7 @@ if(localStorage.getItem("Clicked") === "true"){
     changeBg();
 }
 
-console.log('teste')
+console.log('test')
 
 /*
 
