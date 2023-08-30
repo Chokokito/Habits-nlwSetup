@@ -86,11 +86,7 @@ if (localStorage.getItem("Clicked") === "true") {
   changeBg();
 }
 
-<<<<<<< HEAD
 console.log("teste");
-=======
-console.log('test')
->>>>>>> 8bd1f4cf970002c03ee44cc49d8aeade0d0f29ae
 
 /*
 
