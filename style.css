@@ -152,6 +152,7 @@ header{
     display: flex;
 
     padding: 182px  48px 48px;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -226,8 +227,9 @@ button{
 }
   
 input{
-    appearance: none;
+   
     -webkit-appearance: none;
+    appearance: none;
     
     width: 64px;
     height: 64px;
