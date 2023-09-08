@@ -9,7 +9,8 @@
 celular.ligar() */
 
 //document.querySelector("input").click( )
-import { Howl, Howler } from "howler";
+
+const { Howl, Howler } = require(["howler"]);
 
 const form = document.querySelector("#form-habits");
 const nlwSetup = new NLWSetup(form);
