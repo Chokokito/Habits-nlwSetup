@@ -1,76 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br ">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
-<title>Habits</title>
-<link rel="icon" href="./assets/icon.svg">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Habits</title>
+    <link rel="icon" href="./assets/icon.svg" />
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-  
-  <header>
-    <img class="logo" src="./assets/logo.svg" alt="Logomarca do aplicativo Habits">
-    <img class="logoblack" src="./assets/logoblack.svg" alt="Logomarca do aplicativo Habits">
-    <input type="checkbox" id="darkmode-toggle">
-    <label for="darkmode-toggle" class="darkmode"></label>
-    <!-- <img class="dayError" src="./assets/dayError.svg"> -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <label for="" class="dayError">
-      <img src="./assets/error.svg" alt="Erro">
-      <div>
-        Dia já registrado!
-      </div>
-    </label>
-    <button>
-        <img src="./assets/plus.svg" alt="Sinal de mais roxo">
-        
-        
-       <div>Registrar o meu dia</div>
-      
-      
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="./assets/logo.svg"
+        alt="Logomarca do aplicativo Habits"
+      />
+      <img
+        class="logoblack"
+        src="./assets/logoblack.svg"
+        alt="Logomarca do aplicativo Habits"
+      />
+      <input type="checkbox" id="darkmode-toggle" />
+      <label for="darkmode-toggle" class="darkmode"></label>
+      <!-- <img class="dayError" src="./assets/dayError.svg"> -->
+
+      <label for="" class="dayError">
+        <img src="./assets/error.svg" alt="Erro" />
+        <div>Dia já registrado!</div>
+      </label>
+      <button>
+        <img src="./assets/plus.svg" alt="Sinal de mais roxo" />
+
+        <div>Registrar o meu dia</div>
       </button>
-    
-    
-      
+    </header>
 
-  </header>
-
-
-<form id="form-habits">
-    <div class="habits">
+    <form id="form-habits">
+      <div class="habits">
         <div class="habit" data-name="run">🏃🏻‍♂️</div>
         <div class="habit" data-name="water">💧</div>
         <div class="habit" data-name="food">🍎</div>
         <div class="habit" data-name="journal">📕</div>
         <div class="habit" data-name="takePills">💊</div>
         <div class="habit" data-name="sleep">💤</div>
-    </div>
+      </div>
 
-    <div class="days"></div>
-    
+      <div class="days"></div>
+    </form>
 
-
-</form>
-
-
-
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
-<script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
+    <script src="/node_modules/howler/dist/howler.js" type="module"></script>
+    <script data-main="script.js" src="require.js"></script>
+  </body>
 </html>

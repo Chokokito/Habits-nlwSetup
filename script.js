@@ -9,11 +9,11 @@
 celular.ligar() */
 
 //document.querySelector("input").click( )
+import { Howl, Howler } from "howler";
 
 const form = document.querySelector("#form-habits");
 const nlwSetup = new NLWSetup(form);
 const button = document.querySelector("header button");
-
 button.addEventListener("click", add);
 form.addEventListener("change", save);
 
@@ -22,20 +22,15 @@ function add() {
   const today = new Date().toLocaleDateString("pt-br").slice(0, -5);
   //const today = "30/07"
   const dayExists = nlwSetup.dayExists(today);
-
   if (dayExists) {
     dayError();
   }
-
   nlwSetup.addDay(today);
 }
-
 function save() {
   localStorage.setItem("NLWSetup@habits", JSON.stringify(nlwSetup.data));
 }
-
 const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {};
-
 nlwSetup.setData(data);
 nlwSetup.load();
 // Notificação - Erro ao Adicionar dia já existente.
@@ -54,13 +49,10 @@ const dayText = document.querySelectorAll(".day div");
 const logo = document.querySelector(".logo");
 const logoblack = document.querySelector(".logoblack");
 const error = document.querySelector(".dayError");
-
 label.addEventListener("click", changeBg);
-
 function changeBg() {
   const today = new Date().toLocaleDateString("pt-br").slice(0, -5);
   const dayExists = nlwSetup.dayExists(today);
-
   body.classList.toggle("changeBg");
   header.classList.toggle("changeBgH");
   button.classList.toggle("changeBgBt");
@@ -73,7 +65,6 @@ function changeBg() {
   dayText.forEach((dayText) => {
     dayText.classList.toggle("changeBgText");
   });
-
   logoblack.classList.toggle("logoBlackShow");
   logo.classList.toggle("logoWhiteHide");
   //Pra lembrar se o usuário ativou o modo claro.
@@ -85,8 +76,11 @@ function changeBg() {
 if (localStorage.getItem("Clicked") === "true") {
   changeBg();
 }
-
 console.log("teste");
+var sound = new Howl({
+  src: ["test.mp3"],
+});
+button.addEventListener("click", sound.play);
 
 /*
 
